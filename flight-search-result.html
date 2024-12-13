@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="TechyDevs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bibilomo Travels | Live your Dream Destinations</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/line-awesome.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/animated-headline.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/flag-icon.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- start cssload-loader -->
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <svg class="spinner" viewBox="0 0 50 50">
+          <circle
+            class="path"
+            cx="25"
+            cy="25"
+            r="20"
+            fill="none"
+            stroke-width="5"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- end cssload-loader -->
+
+    <!-- ================================
+            START HEADER AREA
+================================= -->
+<header class="header-area">
+  <div class="header-top-bar padding-right-100px padding-left-100px">
+  </div>
+  <div class="header-menu-wrapper padding-right-100px padding-left-100px">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="menu-wrapper">
+            <a href="#" class="down-button"
+              ><i class="la la-angle-down"></i
+            ></a>
+            <div class="logo">
+              <a href="index.html"
+                ><img src="images/logo.png" alt="logo"
+              /></a>
+              <div class="menu-toggler">
+                <i class="la la-bars"></i>
+                <i class="la la-times"></i>
+              </div>
+              <!-- end menu-toggler -->
+            </div>
+            <!-- end logo -->
+            <div class="main-menu-content">
+              <nav>
+                <ul style="font-size: 22x; font-weight: 600;">
+                  <li>
+                    <a href="index.html">Home </a>
+                    
+                  </li>
+                  <li>
+                    <a href="tour-fullwidth.html">Tour</a>
+                    
+                  </li>
+                  <li>
+                    <a href="flight-grid.html">Explore </a></li></li>
+                    <li><a href="#">About Us </a></li>
+                  <li><a href="contact.html">Contact </a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end main-menu-content -->
+            
+            <!-- end nav-btn -->
+          </div>
+          <!-- end menu-wrapper -->
+        </div>
+        <!-- end col-lg-12 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container-fluid -->
+  </div>
+  <!-- end header-menu-wrapper -->
+</header>
+    <!-- ================================
+         END HEADER AREA
+================================= -->
+
+    <!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+    <section class="breadcrumb-area bread-bg-6">
+      <div class="breadcrumb-wrap">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12">
+              <div class="search-result-content">
+                <div class="section-heading">
+                  <h2 class="sec__title text-white">Flight Search Result</h2>
+                </div>
+              
+              </div>
+              <!-- end search-result-content -->
+            </div>
+            <!-- end col-lg-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end breadcrumb-wrap -->
+      
+      <!-- end bread-svg -->
+    </section>
+    <!-- end breadcrumb-area -->
+
+    <!-- ================================
+    START CARD AREA
+================================= -->
+<section class="card-area section--padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="filter-wrap margin-bottom-30px">
+          <div class="filter-top d-flex align-items-center justify-content-between pb-4">
+            <div>
+              <h3 class="title font-size-24" id="flightCount">Loading Flights...</h3>
+              <p class="font-size-14">
+                <span class="me-1 pt-1">Book with confidence:</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flights Row -->
+    <div class="row">
+      <div id="resultsContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 20px;">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-box mt-3 text-center">
+          <button type="button" class="theme-btn" id="viewAllFlightsBtn">
+            <i class="la la-refresh me-1"></i>View All Flights
+          </button>
+          <p class="font-size-13 pt-2" id="flightInfo">Showing 1 - 6 of 3 Flights</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- end card-area -->
+    
+
+    <div class="section-block"></div>
+ 
+    <!-- ================================
+    END CTA AREA
+================================= -->
+
+    <!-- ================================
+       START FOOTER AREA
+================================= -->
+<section style="background: #ffffff;"
+class="footer-area section-bg padding-top-100px padding-bottom-30px"
+>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 responsive-column">
+      <div class="footer-item">
+        <div class="footer-logo padding-bottom-30px">
+          <a href="index.html" class="foot__logo"
+            ><img src="images/logo.png" alt="logo"
+          /></a>
+        </div>
+        <!-- end logo -->
+        <p class="footer__desc">
+          We specialize in crafting exclusive luxury travel experiences designed to offer comfort and personalized service.
+        </p>
+      </div>
+      <!-- end footer-item -->
+    </div>
+    <!-- end col-lg-3 -->
+    <div class="col-lg-3 responsive-column">
+      <div class="footer-item">
+        <h4 style="color: black; padding-bottom: 10px; font-weight: 600;">
+          Destinations
+        </h4>
+        <ul class="list-items list--items">
+          <li><a href="#">Egypt</a></li>
+          <li><a href="#">Turkey</a></li>
+          <li><a href="#">USA</a></li>
+          <li><a href="#">France</a></li>
+          <li><a href="#">Greece</a></li>
+        </ul>
+      </div>
+      <!-- end footer-item -->
+    </div>
+    <!-- end col-lg-3 -->
+    <div class="col-lg-3 responsive-column">
+      <div class="footer-item">
+        <h4 style="color: black; padding-bottom: 10px; font-weight: 600;" >
+          Useful Links
+        </h4>
+        <ul class="list-items list--items">
+          <li><a href="#">About Us </a></li>
+          <li><a href="#">Travel Blog</a></li>
+          <li><a href="#">Be Our Partner</a></li>
+          <li><a href="#">F.A.Q</a></li>
+        </ul>
+      </div>
+      <!-- end footer-item -->
+    </div>
+    <!-- end col-lg-3 -->
+    <div class="col-lg-3 responsive-column">
+      <div class="footer-item">
+        <h4 style="color: black; padding-bottom: 10px; font-weight: 600;"> Contact Us</h4>
+        <p class="footer__desc pb-3">
+          Travel & Tourism,
+          2855 Nelsonville Rd, Boston, Massachusetts (MA), 40107
+        </p>
+        <div style="display: flex; align-items: flex-start;">
+          <div class="footer-social-box text-end">
+            <ul class="social-profile">
+              <li>
+                <a href="#"><i class="lab la-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end footer-item -->
+    </div>
+    <!-- end col-lg-3 -->
+  </div>
+  <!-- end row -->
+  
+<!-- end container -->
+<div class="section-block mt-4"></div>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-lg-12">
+      <div class="copy-right padding-top-30px">
+        <p class="copy__desc" style="color: black; text-align: center;">
+          &copy; Copyright Bibilomo Travels & Tour   2024
+         
+        </p>
+      </div>
+      <!-- end copy-right -->
+    </div>
+  </div>
+  <!-- end row -->
+</div>
+<!-- end container -->
+</section>
+    <!-- end footer-area -->
+    <!-- ================================
+       START FOOTER AREA
+================================= -->
+
+    <!-- start back-to-top -->
+    <div id="back-to-top">
+      <i class="la la-angle-up" title="Go top"></i>
+    </div>
+    <!-- end back-to-top -->
+
+    <!-- end modal-popup -->
+
+    <!-- end modal-popup -->
+
+    <!-- Template JS Files -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.countTo.min.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/jquery.ripples-min.js"></script>
+    <script src="js/quantity-input.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          const BASE_API_URL = "https://bibilomo-project.onrender.com";
+          const resultsContainer = document.getElementById("resultsContainer");
+          const viewAllBtn = document.getElementById("viewAllFlightsBtn");
+          const queryParams = new URLSearchParams(window.location.search);
+  
+          const from = queryParams.get("from");
+          const to = queryParams.get("to");
+          const date = queryParams.get("date");
+          const coach = queryParams.get("coach");
+  
+          // Function to display flight results
+          const displayFlights = (flights) => {
+              resultsContainer.innerHTML = ""; // Clear previous results
+  
+              if (flights.length === 0) {
+                  resultsContainer.textContent = "No flights found.";
+                  return;
+              }
+  
+              flights.forEach((flight) => {
+                  const card = document.createElement("div");
+                  card.className = "card";
+                  card.innerHTML = `
+                      <div class="col-lg-4 responsive-column" style="width: 100%;">
+                          <div class="card-item flight-card flight--card">
+                              <div class="card-img">
+                                  <img src="" alt="flight-logo-img" />
+                              </div>
+                              <div class="card-body">
+                                  <div class="card-top-title d-flex justify-content-between">
+                                      <div>
+                                          <h3 class="card-title font-size-17">${flight.origin} to ${flight.destination}</h3>
+                                          <p>${flight.coach}</p>
+                                      </div>
+                                      <div>
+                                          <div class="text-end">
+                                              <span class="font-weight-regular font-size-14 d-block">avg/person</span>
+                                              <h6 class="font-weight-bold color-text">$${flight.price}</h6>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flight-details py-3">
+                                  <div class="flight-time pb-3">
+                                      <div class="flight-time-item take-off d-flex">
+                                          <div class="flex-shrink-0 me-2">
+                                              <i class="la la-plane"></i>
+                                          </div>
+                                          <div>
+                                              <h3 class="card-title font-size-15 font-weight-medium mb-0">Departure</h3>
+                                              <p>Date: ${new Date(flight.departure_date).toDateString()}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="flight-time-item landing d-flex">
+                                      <div class="flex-shrink-0 me-2">
+                                          <i class="la la-plane"></i>
+                                      </div>
+                                      <div>
+                                          <h3 class="card-title font-size-15 font-weight-medium mb-0">Return</h3>
+                                          <p class="card-meta font-size-14">${flight.return_date ? new Date(flight.return_date).toDateString() : "One-way"}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="btn-box text-center">
+                                  <a href="flight-single.html" class="theme-btn theme-btn-small w-100">View Details</a>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                  resultsContainer.appendChild(card);
+              });
+          };
+  
+          // Function to fetch filtered flights
+          const fetchFilteredFlights = async () => {
+              if (!from || !to || !date || !coach) {
+                  resultsContainer.innerHTML = "<p>Please provide all search parameters.</p>";
+                  return;
+              }
+  
+              try {
+                  const response = await fetch(`${BASE_API_URL}/api/flight/packages?from=${from}&to=${to}&date=${date}&coach=${coach}`);
+                  if (!response.ok) {
+                      throw new Error("Failed to fetch flight search results.");
+                  }
+  
+                  const flights = await response.json();
+                  displayFlights(flights);
+              } catch (error) {
+                  resultsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+                  console.error("Error:", error);
+              }
+          };
+  
+          // Function to fetch all flights
+          const fetchAllFlights = async () => {
+              try {
+                  const response = await fetch(`${BASE_API_URL}/api/flight/packages`);
+                  if (!response.ok) {
+                      throw new Error("Failed to fetch all flights.");
+                  }
+  
+                  const flights = await response.json();
+                  displayFlights(flights);
+              } catch (error) {
+                  resultsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+                  console.error("Error:", error);
+              }
+          };
+  
+          // Initial fetch of filtered flights
+          await fetchFilteredFlights();
+  
+          // Add event listener for the "View All Flights" button
+          viewAllBtn.addEventListener("click", fetchAllFlights);
+      });
+  </script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const BASE_API_URL = "https://bibilomo-project.onrender.com";
+        const resultsContainer = document.getElementById("resultsContainer");
+        const viewAllBtn = document.getElementById("viewAllFlightsBtn");
+        const queryParams = new URLSearchParams(window.location.search);
+
+        const id = queryParams.get("id");
+
+        const displayFlights = (flights) => {
+            resultsContainer.innerHTML = "";
+
+            if (!flights.length) {
+                resultsContainer.textContent = "No flights found.";
+                return;
+            }
+
+            flights.forEach((flight) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                      <div class="col-lg-4 responsive-column" style="width: 100%;">
+                          <div class="card-item flight-card flight--card">
+                              <div class="card-img">
+                                  <img src="" alt="flight-logo-img" />
+                              </div>
+                              <div class="card-body">
+                                  <div class="card-top-title d-flex justify-content-between">
+                                      <div>
+                                          <h3 class="card-title font-size-17">${flight.origin} to ${flight.destination}</h3>
+                                         <p>Economy</p>
+                                      </div>
+                                      <div>
+                                          <div class="text-end">
+                                              <span class="font-weight-regular font-size-14 d-block">avg/person</span>
+                                              <h6 class="font-weight-bold color-text">$${flight.price}</h6>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flight-details py-3">
+                                  <div class="flight-time pb-3">
+                                      <div class="flight-time-item take-off d-flex">
+                                          <div class="flex-shrink-0 me-2">
+                                              <i class="la la-plane"></i>
+                                          </div>
+                                          <div>
+                                              <h3 class="card-title font-size-15 font-weight-medium mb-0">Departure</h3>
+                                              <p>${new Date(flight.departure_date).toDateString()}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="flight-time-item landing d-flex">
+                                      <div class="flex-shrink-0 me-2">
+                                          <i class="la la-plane"></i>
+                                      </div>
+                                      <div>
+                                          <h3 class="card-title font-size-15 font-weight-medium mb-0">Return</h3>
+                                          <p class="card-meta font-size-14">${flight.return_date ? new Date(flight.return_date).toDateString() : "One-way"}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="btn-box text-center">
+                                  <a href="flight-single.html" class="theme-btn theme-btn-small w-100">View Details</a>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                resultsContainer.appendChild(card);
+            });
+        };
+
+        const fetchFlightById = async () => {
+            if (!id) {
+                resultsContainer.innerHTML = "<p>Please provide a valid flight ID in the URL (e.g., ?id=123).</p>";
+                return;
+            }
+
+            try {
+                resultsContainer.innerHTML = "<p>Loading...</p>";
+                const response = await fetch(`${BASE_API_URL}/api/flight/package/${id}`);
+                if (!response.ok) throw new Error(`Error fetching flight details: ${response.statusText}`);
+                const flight = await response.json();
+                displayFlights([flight]);
+            } catch (error) {
+                resultsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+                console.error("Error:", error);
+            }
+        };
+
+        const fetchAllFlights = async () => {
+            try {
+                resultsContainer.innerHTML = "<p>Loading...</p>";
+                const response = await fetch(`${BASE_API_URL}/api/flight/packages`);
+                if (!response.ok) throw new Error(`Error fetching all flights: ${response.statusText}`);
+                const flights = await response.json();
+                displayFlights(flights);
+            } catch (error) {
+                resultsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+                console.error("Error:", error);
+            }
+        };
+
+        if (id) await fetchFlightById();
+        viewAllBtn.addEventListener("click", fetchAllFlights);
+    });
+</script>
+
+</body>
+</html>  
