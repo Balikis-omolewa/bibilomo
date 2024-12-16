@@ -503,7 +503,8 @@ class="footer-area section-bg padding-top-100px padding-bottom-30px"
                                   </div>
                               </div>
                               <div class="btn-box text-center">
-                                  <a href="flight-single.html" class="theme-btn theme-btn-small w-100">View Details</a>
+                                  <a href="flight-single.html?id=${flight.id}" class="theme-btn theme-btn-small w-100">View Details</a>
+
                               </div>
                           </div>
                       </div>
@@ -514,7 +515,7 @@ class="footer-area section-bg padding-top-100px padding-bottom-30px"
 
         const fetchFlightById = async () => {
             if (!id) {
-                resultsContainer.innerHTML = "<p>Please provide a valid flight ID in the URL (e.g., ?id=123).</p>";
+                resultsContainer.innerHTML = "<p>flight ID in not captured.</p>";
                 return;
             }
 
